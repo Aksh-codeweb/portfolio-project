@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindGarden - Mental Well-being Companion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <h1>MindGarden</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="#mood-module" class="nav-link active" data-target="mood">Mood</a>
+            <a href="#journal-module" class="nav-link" data-target="journal">Journal</a>
+            <a href="#hobby-module" class="nav-link" data-target="hobby">Hobbies</a>
+            <a href="#chatbot-container" class="nav-link" id="chatbot-nav-link">Chatbot</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Nurture Your Mental Well-being</h2>
+            <p>Track your emotions, journal your thoughts, and discover activities to help you grow and thrive every day.</p>
+            <button class="cta-button" id="hero-cta">Start Your Journey</button>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Mood Tracker Module -->
+        <div id="mood-module" class="module active">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-smile"></i> How are you feeling today?</h2>
+                </div>
+                <p>Select your current mood to track your emotional well-being</p>
+                
+                <div class="mood-options">
+                    <div class="mood-option happy" data-mood="happy">
+                        <i class="fas fa-smile"></i>
+                        <span>Happy</span>
+                    </div>
+                    <div class="mood-option sad" data-mood="sad">
+                        <i class="fas fa-sad-tear"></i>
+                        <span>Sad</span>
+                    </div>
+                    <div class="mood-option neutral" data-mood="neutral">
+                        <i class="fas fa-meh"></i>
+                        <span>Neutral</span>
+                    </div>
+                    <div class="mood-option anxious" data-mood="anxious">
+                        <i class="fas fa-flushed"></i>
+                        <span>Anxious</span>
+                    </div>
+                    <div class="mood-option energetic" data-mood="energetic">
+                        <i class="fas fa-grin-stars"></i>
+                        <span>Energetic</span>
+                    </div>
+                    <div class="mood-option custom" data-mood="custom">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Custom</span>
+                    </div>
+                </div>
+                
+                <div id="custom-mood-input" style="display: none;">
+                    <input type="text" placeholder="Enter your mood" id="custom-mood">
+                    <button class="btn" id="save-custom-mood">
+                        <i class="fas fa-save"></i> Save Mood
+                    </button>
+                </div>
+                
+                <div id="mood-note-section" style="display: none;">
+                    <h3>Add a note (optional)</h3>
+                    <textarea id="mood-note" rows="3" placeholder="What's influencing your mood today?"></textarea>
+                    <button class="btn" id="save-mood">
+                        <i class="fas fa-check"></i> Save Mood Entry
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-chart-line"></i> Weekly Analysis</h2>
+                </div>
+                <div class="chart-container">
+                    <canvas id="moodChart"></canvas>
+                </div>
+                
+                <div class="insight-box" id="mood-insight">
+                    <i class="fas fa-lightbulb"></i> Track your mood to see insights here!
+                </div>
+            </div>
+        </div>
+
+        <!-- Journaling Module -->
+        <div id="journal-module" class="module">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-book"></i> Journal Your Thoughts</h2>
+                </div>
+                <p>Express yourself through writing or selfie journaling</p>
+                
+                <div class="grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div>
+                        <h3>Text Entry</h3>
+                        <textarea id="journal-entry" rows="5" placeholder="What's on your mind today?"></textarea>
+                    </div>
+                    <div>
+                        <h3>Selfie Journaling</h3>
+                        <div class="selfie-container" id="selfie-upload">
+                            <i class="fas fa-camera" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <p>Click to capture or upload a selfie</p>
+                            <input type="file" id="selfie-input" accept="image/*" capture="environment" style="display: none;">
+                            <img id="selfie-preview" class="selfie-preview" alt="Selfie preview">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-3" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;">
+                    <div>
+                        <h3>Tags</h3>
+                        <input type="text" placeholder="Add tags (comma separated)" id="journal-tags">
+                    </div>
+                    <div>
+                        <h3>Mood</h3>
+                        <select id="journal-mood">
+                            <option>Select mood</option>
+                            <option>Happy</option>
+                            <option>Sad</option>
+                            <option>Neutral</option>
+                            <option>Anxious</option>
+                            <option>Energetic</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Privacy</h3>
+                        <select id="journal-privacy">
+                            <option>Private</option>
+                            <option>Shared anonymously</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn" id="save-journal" style="margin-top: 1.5rem;">
+                    <i class="fas fa-save"></i> Save Journal Entry
+                </button>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-history"></i> Past Entries</h2>
+                </div>
+                <input type="text" placeholder="Search entries..." id="journal-search" style="margin-bottom: 1.5rem;">
+                
+                <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                    <button class="btn">
+                        <i class="fas fa-filter"></i> Filter by Tags
+                    </button>
+                    <button class="btn">
+                        <i class="fas fa-download"></i> Export
+                    </button>
+                </div>
+                
+                <div id="journal-entries-container">
+                    <!-- Journal entries will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Hobby Activities Module -->
+        <div id="hobby-module" class="module">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-paint-brush"></i> Hobby Categories</h2>
+                </div>
+                <p>Explore activities to nurture your mind and soul</p>
+                
+                <div class="hobby-categories" id="hobby-categories-container">
+                    <div class="hobby-category" style="color: var(--secondary);">
+                        <button class="delete-hobby">×</button>
+                        <i class="fas fa-palette"></i>
+                        <span>Art</span>
+                    </div>
+                    <div class="hobby-category" style="color: var(--primary);">
+                        <button class="delete-hobby">×</button>
+                        <i class="fas fa-music"></i>
+                        <span>Music</span>
+                    </div>
+                    <div class="hobby-category" style="color: var(--success);">
+                        <button class="delete-hobby">×</button>
+                        <i class="fas fa-running"></i>
+                        <span>Fitness</span>
+                    </div>
+                    <div class="hobby-category" style="color: var(--warning);">
+                        <button class="delete-hobby">×</button>
+                        <i class="fas fa-leaf"></i>
+                        <span>Gardening</span>
+                    </div>
+                    <div class="hobby-category" style="color: var(--accent);">
+                        <button class="delete-hobby">×</button>
+                        <i class="fas fa-book"></i>
+                        <span>Reading</span>
+                    </div>
+                    <div class="hobby-category" style="color: var(--danger);">
+                        <button class="delete-hobby">×</button>
+                        <i class="fas fa-utensils"></i>
+                        <span>Cooking</span>
+                    </div>
+                </div>
+                
+                <button class="btn" id="add-hobby" style="margin-top: 1.5rem;">
+                    <i class="fas fa-plus"></i> Add New Hobby
+                </button>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-palette"></i> Art Activities</h2>
+                </div>
+                
+                <div class="activity-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h3>5-Minute Doodle Exercise</h3>
+                        <span class="time-badge">
+                            <i class="fas fa-clock"></i> 5 min
+                        </span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">Let your creativity flow without judgment. Doodle whatever comes to mind for 5 minutes.</p>
+                    <ol style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                        <li>Grab a pen and paper</li>
+                        <li>Set a timer for 5 minutes</li>
+                        <li>Start doodling without overthinking</li>
+                        <li>Notice how you feel afterward</li>
+                    </ol>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <label>
+                            <input type="checkbox" class="activity-complete"> Mark as completed
+                        </label>
+                        <button class="btn add-note-btn">
+                            <i class="fas fa-plus"></i> Add Note
+                        </button>
+                    </div>
+                    <div class="activity-notes" style="display: none; margin-top: 1rem;">
+                        <textarea placeholder="Add your notes here..." rows="2"></textarea>
+                        <button class="btn save-note-btn">Save Note</button>
+                    </div>
+                    <div class="activity-note">
+                        <!-- Notes will appear here -->
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <h3>Color Therapy</h3>
+                        <span class="time-badge">
+                            <i class="fas fa-clock"></i> 15 min
+                        </span>
+                    </div>
+                    <p style="margin-bottom: 1rem;">Use colors to express your current mood through abstract art.</p>
+                    <ol style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                        <li>Choose colors that represent how you feel</li>
+                        <li>Create an abstract piece using those colors</li>
+                        <li>Don't worry about making it "look like" anything</li>
+                        <li>Reflect on why you chose those colors</li>
+                    </ol>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <label>
+                            <input type="checkbox" class="activity-complete"> Mark as completed
+                        </label>
+                        <button class="btn add-note-btn">
+                            <i class="fas fa-plus"></i> Add Note
+                        </button>
+                    </div>
+                    <div class="activity-notes" style="display: none; margin-top: 1rem;">
+                        <textarea placeholder="Add your notes here..." rows="2"></textarea>
+                        <button class="btn save-note-btn">Save Note</button>
+                    </div>
+                    <div class="activity-note">
+                        <!-- Notes will appear here -->
+                    </div>
+                </div>
+                
+                <button class="btn" id="add-activity">
+                    <i class="fas fa-plus"></i> Add New Activity
+                </button>
+            </div>
+        </div>
+
+        <div class="privacy-note">
+            <i class="fas fa-lock"></i> Your data is stored locally on your device for privacy. 
+            We never access your personal information without your permission.
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-btn" id="chatbot-toggle">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chat-header">
+                <h3>MindGarden Assistant</h3>
+                <i class="fas fa-times" id="close-chat"></i>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    Hi there! I'm here to support you. How are you feeling today?
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button class="send-btn" id="send-message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div id="assessment-options" class="assessment-options" style="display: none;"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>MindGarden &copy; 2023 | Nurturing mental well-being with privacy first</p>
+    </footer>
+
+   <script src="script.js"></script>
+</body>
+</html>
