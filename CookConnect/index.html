@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CookConnect - Home-Cooked Meals for Busy Indian Families</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Hind+Siliguri:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <i class="fas fa-utensils"></i>
+            <h1>Cook<span>Connect</span></h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#providers">Find a Cook</a></li>
+              <li><a href="#contact">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li class="nav-buttons">
+                <button class="nav-btn login-btn" id="loginBtn">Login</button>
+                <button class="nav-btn signup-btn" id="signupBtn">
+                  Sign Up
+                </button>
+              </li>
+            </ul>
+            <i class="nav-icon fas fa-bars" id="menuToggle"></i>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <i class="close-menu fas fa-times" id="closeMenu"></i>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#providers">Find a Cook</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-auth-buttons">
+        <button class="nav-btn login-btn" id="mobileLoginBtn">Login</button>
+        <button class="nav-btn signup-btn" id="mobileSignupBtn">Sign Up</button>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Delicious Home-Cooked Indian Meals Without the Hassle</h2>
+          <p>
+            CookConnect helps busy Indian families enjoy nutritious, home-cooked
+            meals by connecting them with talented local cooks, tiffin services,
+            and household helpers. Reclaim your evenings and enjoy quality time
+            with your loved ones!
+          </p>
+          <button class="cta-button" onclick="scrollToProviders()">
+            Find a Cook Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-text">Trusted Cooks</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10,000+</div>
+            <div class="stat-text">Happy Families</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-text">Cities Across India</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-text">Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title">How CookConnect Works</h2>
+        <div class="services-grid">
+          <div class="service-card" id="service1">
+            <div class="service-img">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="service-content">
+              <h3>Browse Local Providers</h3>
+              <p>
+                Explore profiles of cooks, tiffin services, and helpers in your
+                area. Filter by cuisine, availability, and budget.
+              </p>
+            </div>
+            <div class="service-demo">
+              <div class="demo-content">
+                <h4><i class="fas fa-play-circle"></i> How it works</h4>
+                <p>
+                  Use our advanced filters to find cooks in your area. View
+                  profiles with photos, menus, ratings, and prices to find your
+                  perfect match.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="service-card" id="service2">
+            <div class="service-img">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="service-content">
+              <h3>Book Your Service</h3>
+              <p>
+                Select your preferred provider, choose a time slot, and book
+                their services with just a few clicks.
+              </p>
+            </div>
+            <div class="service-demo">
+              <div class="demo-content">
+                <h4><i class="fas fa-play-circle"></i> How it works</h4>
+                <p>
+                  Once you find a cook you like, select your preferred meal
+                  plan, schedule, and duration. Confirm your booking with a
+                  secure payment process.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="service-card" id="service3">
+            <div class="service-img">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <div class="service-content">
+              <h3>Enjoy Delicious Meals</h3>
+              <p>
+                Sit back, relax, and enjoy delicious, home-cooked meals without
+                the stress of daily cooking.
+              </p>
+            </div>
+            <div class="service-demo">
+              <div class="demo-content">
+                <h4><i class="fas fa-play-circle"></i> How it works</h4>
+                <p>
+                  Your cook will prepare fresh meals according to your
+                  preferences and deliver them at the scheduled time. Enjoy
+                  restaurant-quality food at home!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Providers Section -->
+    <section class="providers" id="providers">
+      <div class="container">
+        <h2 class="section-title">Find Your Perfect Cook</h2>
+
+        <div class="filter-section">
+          <h3 class="filter-title">
+            <i class="fas fa-filter"></i> Filter Providers
+          </h3>
+          <div class="filter-grid">
+            <div class="filter-group">
+              <label for="location">Location</label>
+              <select id="location">
+                <option value="">Any Location</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="delhi">Delhi</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="chennai">Chennai</option>
+                <option value="kolkata">Kolkata</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="pune">Pune</option>
+                <option value="ahmedabad">Ahmedabad</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="cuisine">Cuisine Specialty</label>
+              <select id="cuisine">
+                <option value="">Any Cuisine</option>
+                <option value="north-indian">North Indian</option>
+                <option value="south-indian">South Indian</option>
+                <option value="punjabi">Punjabi</option>
+                <option value="gujarati">Gujarati</option>
+                <option value="bengali">Bengali</option>
+                <option value="rajasthani">Rajasthani</option>
+                <option value="maharashtrian">Maharashtrian</option>
+                <option value="hyderabadi">Hyderabadi</option>
+                <option value="kerala">Kerala</option>
+                <option value="indo-chinese">Indo-Chinese</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="food-type">Food Type</label>
+              <select id="food-type">
+                <option value="">Any Type</option>
+                <option value="veg">Vegetarian</option>
+                <option value="non-veg">Non-Vegetarian</option>
+                <option value="jain">Jain</option>
+                <option value="eggetarian">Eggetarian</option>
+                <option value="vegan">Vegan</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="rating">Minimum Rating</label>
+              <select id="rating">
+                <option value="0">Any Rating</option>
+                <option value="3">3+ Stars</option>
+                <option value="3.5">3.5+ Stars</option>
+                <option value="4">4+ Stars</option>
+                <option value="4.5">4.5+ Stars</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label>Meals per day</label>
+            <div class="filter-row">
+              <div class="filter-chip" data-value="1">1 Meal</div>
+              <div class="filter-chip" data-value="2">2 Meals</div>
+              <div class="filter-chip" data-value="3">3 Meals</div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label>Service Type</label>
+            <div class="filter-row">
+              <div class="filter-chip" data-value="cook">Home Cook</div>
+              <div class="filter-chip" data-value="tiffin">Tiffin Service</div>
+              <div class="filter-chip" data-value="helper">Home Helper</div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label for="price-range"
+              >Max Price per Meal:
+              <span id="price-value" class="price-value">₹500</span></label
+            >
+            <div class="price-range">
+              <input
+                type="range"
+                id="price-range"
+                min="50"
+                max="500"
+                step="50"
+                value="500"
+              />
+            </div>
+          </div>
+
+          <div class="filter-buttons">
+            <button class="filter-btn apply-btn" onclick="filterProviders()">
+              Apply Filters
+            </button>
+            <button class="filter-btn reset-btn" onclick="resetFilters()">
+              Reset
+            </button>
+          </div>
+        </div>
+
+        <div class="providers-grid" id="providers-container">
+          <!-- Provider cards will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Families Say</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              CookConnect has been a lifesaver for our dual-income family. We
+              get delicious home-cooked Gujarati meals every day without the
+              hassle of cooking after a long work day.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-details">
+                <h4>Rajesh & Meera Patel</h4>
+                <p>Mumbai</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              As a working mother, CookConnect has given me peace of mind
+              knowing my family is eating nutritious South Indian food. The
+              platform is easy to use and the cooks are professional.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-details">
+                <h4>Priya Sridhar</h4>
+                <p>Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              We found an amazing Punjabi cook through CookConnect who makes the
+              most delicious parathas and curries. The booking process was
+              simple and the pricing is very reasonable.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-details">
+                <h4>Amrit Singh</h4>
+                <p>Delhi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About CookConnect</h3>
+            <p>
+              CookConnect is a platform dedicated to helping busy Indian
+              families enjoy home-cooked meals by connecting them with talented
+              local food providers.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+              </li>
+              <li>
+                <a href="#services"
+                  ><i class="fas fa-chevron-right"></i> Services</a
+                >
+              </li>
+              <li>
+                <a href="#providers"
+                  ><i class="fas fa-chevron-right"></i> Find a Cook</a
+                >
+              </li>
+              <li>
+                <a href="#about"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="#contact"
+                  ><i class="fas fa-chevron-right"></i> Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"
+                  ><i class="fas fa-map-marker-alt"></i> 123 Food Street,
+                  Culinary Town</a
+                >
+              </li>
+              <li>
+                <a href="tel:+915551234567"
+                  ><i class="fas fa-phone"></i> +91 555 123 4567</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@cookconnect.in"
+                  ><i class="fas fa-envelope"></i> info@cookconnect.in</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-clock"></i> Mon-Sat: 9AM to 6PM</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 CookConnect. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+      <div class="modal-content">
+        <i class="close-modal fas fa-times" id="closeLoginModal"></i>
+        <h2 class="modal-title">Login</h2>
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="Enter your email" />
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter your password"
+          />
+        </div>
+        <button class="modal-btn">Login</button>
+        <div class="modal-footer">
+          <p>
+            Don't have an account? <a href="#" id="switchToSignup">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+      <div class="modal-content">
+        <i class="close-modal fas fa-times" id="closeSignupModal"></i>
+        <h2 class="modal-title">Sign Up</h2>
+        <div class="form-group">
+          <label for="signupName">Full Name</label>
+          <input
+            type="text"
+            id="signupName"
+            placeholder="Enter your full name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" placeholder="Enter your email" />
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input
+            type="password"
+            id="signupPassword"
+            placeholder="Create a password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="signupPhone">Phone Number</label>
+          <input
+            type="tel"
+            id="signupPhone"
+            placeholder="Enter your phone number"
+          />
+        </div>
+        <button class="modal-btn">Create Account</button>
+        <div class="modal-footer">
+          <p>
+            Already have an account? <a href="#" id="switchToLogin">Login</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
