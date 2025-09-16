@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap Circle | Learn and Teach Skills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <i class="fas fa-exchange-alt logo-icon"></i>
+                    <span>SkillSwap Circle</span>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#browse-skills">Browse Skills</a>
+                    <a href="#testimonials">Success Stories</a>
+                    <a href="#features">Community</a>
+                    <a href="#pricing">Pricing</a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" id="loginBtn">Log In</button>
+                    <button class="btn btn-primary" id="signupBtn">Sign Up Free</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="close-menu" id="closeMenu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#browse-skills">Browse Skills</a></li>
+            <li><a href="#testimonials">Success Stories</a></li>
+            <li><a href="#features">Community</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#" id="mobileLoginBtn">Log In</a></li>
+            <li><a href="#" id="mobileSignupBtn">Sign Up</a></li>
+        </ul>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeLoginModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal-title">Log In to Your Account</h2>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Your email address">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Your password">
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeSignupModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal-title">Create Your Account</h2>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" placeholder="Your email address">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" placeholder="Create a password">
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section - Redesigned -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Learn New Skills, Share Your Knowledge</h1>
+                <p class="fade-in">SkillSwap Circle connects people who want to learn with those who can teach. Exchange skills instead of paying money - it's that simple!</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="heroSignupBtn">
+                        <i class="fas fa-rocket"></i> Get Started Now
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-illustration">
+                <i class="fas fa-people-arrows" style="font-size: 200px; color: #6c63ff;"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="container" id="how-it-works">
+        <h2 class="section-title">How SkillSwap Works</h2>
+        
+        <div class="steps">
+            <div class="step-card slide-up">
+                <div class="step-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h3>1. Create Profile</h3>
+                <p>List the skills you want to learn and the skills you can teach. Add your availability and preferred mode.</p>
+            </div>
+            
+            <div class="step-card slide-up">
+                <div class="step-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>2. Find Matches</h3>
+                <p>Our algorithm finds perfect skill exchange partners based on your preferences and availability.</p>
+            </div>
+            
+            <div class="step-card slide-up">
+                <div class="step-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>3. Connect & Chat</h3>
+                <p>Message your matches directly through our platform to arrange your skill swap details.</p>
+            </div>
+            
+            <div class="step-card slide-up">
+                <div class="step-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>4. Learn & Teach</h3>
+                <p>Meet up online or in person, share your skills, and learn something new in return!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose SkillSwap Circle</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card slide-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Completely Free</h3>
+                    <p>No fees, no subscriptions. SkillSwap is about exchanging knowledge, not money.</p>
+                </div>
+                
+                <div class="feature-card slide-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Local or Online</h3>
+                    <p>Connect with people in your area or learn from anyone around the world online.</p>
+                </div>
+                
+                <div class="feature-card slide-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safe Community</h3>
+                    <p>Verified profiles, ratings, and reviews help ensure a safe learning environment.</p>
+                </div>
+                
+                <div class="feature-card slide-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Earn Badges</h3>
+                    <p>Get recognized for your contributions with achievement badges and skill ratings.</p>
+                </div>
+                
+                <div class="feature-card slide-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Set your own availability and find partners who match your schedule.</p>
+                </div>
+                
+                <div class="feature-card slide-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your learning journey and see how many skills you've acquired and shared.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Browse Skills Section -->
+    <section class="skills-section container" id="browse-skills">
+        <h2 class="section-title">Popular Skill Categories</h2>
+        
+        <div class="categories">
+            <button class="category-btn active" data-category="all">All Skills</button>
+            <button class="category-btn" data-category="tech">Tech & Coding</button>
+            <button class="category-btn" data-category="language">Languages</button>
+            <button class="category-btn" data-category="music">Music</button>
+            <button class="category-btn" data-category="cooking">Cooking</button>
+            <button class="category-btn" data-category="fitness">Fitness</button>
+            <button class="category-btn" data-category="art">Arts & Crafts</button>
+            <button class="category-btn" data-category="academic">Academic</button>
+            <button class="category-btn" data-category="business">Business</button>
+            <button class="category-btn" data-category="diy">DIY & Home</button>
+        </div>
+        
+        <div class="skills-slider-container">
+            <div class="slider-nav prev" id="sliderPrev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="skills-slider" id="skillsSlider">
+                <!-- Skills will be populated by JavaScript -->
+            </div>
+            <div class="slider-nav next" id="sliderNext">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">What Our Users Say</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card slide-up">
+                    <p class="testimonial-text">I've learned web development and Spanish while teaching guitar and cooking. SkillSwap Circle helped me acquire new skills without spending money!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div>
+                            <h4>Jessica Doe</h4>
+                            <p>Graphic Designer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card slide-up">
+                    <p class="testimonial-text">As a freelance developer, I've expanded my skill set tremendously through SkillSwap. I've also met amazing people in my area with similar interests.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MS</div>
+                        <div>
+                            <h4>Michael Smith</h4>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card slide-up">
+                    <p class="testimonial-text">I moved to a new city and SkillSwap helped me build a network of friends while learning photography. Now I'm teaching cooking classes in return!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AR</div>
+                        <div>
+                            <h4>Amanda Rodriguez</h4>
+                            <p>Photographer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="features" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card slide-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Free Plan</h3>
+                    <p>Perfect for beginners who want to try skill swapping</p>
+                    <p class="skill-stats" style="justify-content: center; margin-top: 15px;">
+                        <span style="font-size: 1.5rem; font-weight: bold;">RS.0</span>
+                    </p>
+                    <ul style="text-align: left; margin-top: 20px;">
+                        <li>5 skill swaps per month</li>
+                        <li>Basic matching algorithm</li>
+                        <li>Community support</li>
+                    </ul>
+                    <button class="btn btn-outline" style="margin-top: 20px;">Get Started</button>
+                </div>
+                
+                <div class="feature-card slide-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Pro Plan</h3>
+                    <p>For serious learners who want unlimited access</p>
+                    <p class="skill-stats" style="justify-content: center; margin-top: 15px;">
+                        <span style="font-size: 1.5rem; font-weight: bold;">RS.999</span>
+                        <span>/month</span>
+                    </p>
+                    <ul style="text-align: left; margin-top: 20px;">
+                        <li>Unlimited skill swaps</li>
+                        <li>Advanced matching algorithm</li>
+                        <li>Priority support</li>
+                        <li>Exclusive workshops</li>
+                    </ul>
+                    <button class="btn btn-primary" style="margin-top: 20px;">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="section-title">Ready to Start Swapping Skills?</h2>
+                <p>Join thousands of learners and teachers already using SkillSwap Circle to exchange knowledge and build community.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-accent" id="ctaSignupBtn">
+                        <i class="fas fa-user-plus"></i> Create Free Account
+                    </button>
+                    <button class="btn btn-outline" id="browseSkillsBtn">
+                        <i class="fas fa-search"></i> Browse Skills
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SkillSwap Circle</h3>
+                    <p>Connecting learners and teachers through the power of skill exchange.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#browse-skills">Browse Skills</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                        <li><a href="#features">Community</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new features and skill opportunities.</p>
+                    <form>
+                        <input type="email" placeholder="Your email address" style="width: 100%; padding: 12px; margin: 10px 0; border: none; border-radius: var(--border-radius-sm); background: var(--dark-surface); color: var(--light);">
+                        <button class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SkillSwap Circle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
