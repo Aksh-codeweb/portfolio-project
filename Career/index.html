@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Universe Explorer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <i class="fas fa-rocket"></i>
+        <span>CareerUniverse</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-page="explore">Explore</a></li>
+        <li>
+          <a href="#" class="nav-link" data-page="resources">Resources</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link" data-page="my-journey">My Journey</a>
+        </li>
+        <li><a href="#" class="nav-link" data-page="quiz">Career Quiz</a></li>
+        <li>
+          <a href="#" class="nav-link" data-page="inspiration">Inspiration</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link" data-page="community">Community</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Page -->
+  <div id="home" class="page active">
+    <div class="container">
+      <div class="hero">
+        <h1>Discover Your Career Universe</h1>
+        <p>
+          Embark on an interactive journey through career paths, collect
+          achievements, and plan your professional future in a gamified
+          experience.
+        </p>
+        <a href="#" class="cta-button explore-btn">Launch Exploration</a>
+      </div>
+
+      <div class="orbit-container">
+        <div class="sun">
+          <i class="fas fa-user-astronaut"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explore Page -->
+  <div id="explore" class="page">
+    <div class="container">
+      <h2 class="page-title">Explore Career Galaxies</h2>
+
+      <div class="career-filters">
+        <button class="filter-btn active" data-filter="all">
+          All Careers
+        </button>
+        <button class="filter-btn" data-filter="technology">
+          Technology
+        </button>
+        <button class="filter-btn" data-filter="creative">Creative</button>
+        <button class="filter-btn" data-filter="business">Business</button>
+        <button class="filter-btn" data-filter="healthcare">
+          Healthcare
+        </button>
+        <button class="filter-btn" data-filter="education">Education</button>
+      </div>
+
+      <div class="career-grid">
+        <div class="career-card" data-career="developer" data-category="technology">
+          <div class="career-card-header">
+            <i class="fas fa-code"></i>
+            <h3>Software Developer</h3>
+          </div>
+          <div class="career-card-body">
+            <p>
+              Build and maintain software applications, systems, and
+              platforms. Work with programming languages and development
+              frameworks.
+            </p>
+          </div>
+        </div>
+
+        <div class="career-card" data-career="designer" data-category="creative">
+          <div class="career-card-header">
+            <i class="fas fa-paint-brush"></i>
+            <h3>UX/UI Designer</h3>
+          </div>
+          <div class="career-card-body">
+            <p>
+              Create user-centered designs by understanding business
+              requirements and user feedback. Design user flows, interfaces,
+              and experiences.
+            </p>
+          </div>
+        </div>
+
+        <div class="career-card" data-career="data-scientist" data-category="technology">
+          <div class="career-card-header">
+            <i class="fas fa-chart-line"></i>
+            <h3>Data Scientist</h3>
+          </div>
+          <div class="career-card-body">
+            <p>
+              Analyze and interpret complex data to help companies make better
+              decisions. Use statistics, machine learning, and analytics.
+            </p>
+          </div>
+        </div>
+
+        <div class="career-card" data-career="marketer" data-category="business">
+          <div class="career-card-header">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Digital Marketer</h3>
+          </div>
+          <div class="career-card-body">
+            <p>
+              Promote brands and products through digital channels. Work with
+              SEO, social media, email marketing, and online advertising.
+            </p>
+          </div>
+        </div>
+
+        <div class="career-card" data-career="healthcare" data-category="healthcare">
+          <div class="career-card-header">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Healthcare Professional</h3>
+          </div>
+          <div class="career-card-body">
+            <p>
+              Work in various medical roles from nursing to specialized
+              medicine, helping people maintain and improve their health.
+            </p>
+          </div>
+        </div>
+
+        <div class="career-card" data-career="education" data-category="education">
+          <div class="career-card-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Educator</h3>
+          </div>
+          <div class="career-card-body">
+            <p>
+              Teach and inspire students of all ages in various subjects, from
+              elementary education to specialized university instruction.
+            </p>
+          </div>
+        </div>
+
+        <div class="career-card" data-career="engineer" data-category="technology">
+          <div class="career-card-header">
+            <i class="fas fa-cogs"></i>
+            <h3>Mechanical Engineer</h3>
+          </div>
+          <div class="career-card-body">
+            <p>
+              Design, develop, build, and test mechanical devices, tools,
+              engines, and machines for various industries.
+            </p>
+          </div>
+        </div>
+
+        <div class="career-card" data-career="finance" data-category="business">
+          <div class="career-card-header">
+            <i class="fas fa-chart-pie"></i>
+            <h3>Financial Analyst</h3>
+          </div>
+          <div class="career-card-body">
+            <p>
+              Examine financial data and use findings to help businesses make
+              investment decisions and evaluate performance.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="roadmap-container" id="roadmap">
+        <h2 class="roadmap-title" id="roadmap-title">Career Roadmap</h2>
+
+        <div class="step-cards">
+          <div class="step-card">
+            <span class="step-number">1</span>
+            <h3>Education & Foundation</h3>
+            <p>
+              Start with a bachelor's degree in computer science or related
+              field. Learn programming fundamentals and data structures.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">2</span>
+            <h3>Build Projects</h3>
+            <p>
+              Create a portfolio of projects to showcase your skills.
+              Contribute to open source or build your own applications.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">3</span>
+            <h3>Internship & Entry-Level</h3>
+            <p>
+              Gain practical experience through internships. Apply for junior
+              developer positions to start your professional journey.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">4</span>
+            <h3>Specialize</h3>
+            <p>
+              Choose a specialization like front-end, back-end, mobile, or
+              full-stack development. Learn advanced concepts and frameworks.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">5</span>
+            <h3>Senior Roles & Leadership</h3>
+            <p>
+              Progress to senior developer, tech lead, or architect roles.
+              Mentor junior developers and contribute to technical strategy.
+            </p>
+          </div>
+        </div>
+
+        <button class="save-path-btn">Save This Path to My Journey</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resources Page -->
+  <div id="resources" class="page">
+    <div class="container">
+      <h2 class="page-title">Resources Hub</h2>
+
+      <div class="resources-container">
+        <div class="resource-section">
+          <div class="resource-header">
+            <h3><i class="fas fa-book"></i> Recommended Books</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="resource-content">
+            <div class="resource-item">
+              <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" target="_blank">
+                <i class="fas fa-external-link-alt"></i> "Clean Code" by
+                Robert C. Martin
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="resource-item">
+              <a href="https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612"
+                target="_blank">
+                <i class="fas fa-external-link-alt"></i> "Design Patterns" by
+                Erich Gamma
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="resource-item">
+              <a href="https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052"
+                target="_blank">
+                <i class="fas fa-external-link-alt"></i> "The Pragmatic
+                Programmer" by Andrew Hunt
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="resource-item">
+              <a href="https://www.amazon.com/You-Dont-Know-JS-Collection/dp/B08SF6Y8G6" target="_blank">
+                <i class="fas fa-external-link-alt"></i> "You Don't Know JS"
+                by Kyle Simpson
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="resource-section">
+          <div class="resource-header">
+            <h3><i class="fas fa-link"></i> Useful Links & Courses</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="resource-content">
+            <div class="resource-item">
+              <a href="https://www.freecodecamp.org/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> freeCodeCamp - Free
+                coding tutorials
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="resource-item">
+              <a href="https://developer.mozilla.org/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> MDN Web Docs - Web
+                development resources
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="resource-item">
+              <a href="https://www.coursera.org/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Coursera - Online
+                courses from universities
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="resource-item">
+              <a href="https://www.udemy.com/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Udemy - Skill-based
+                courses
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="resource-section">
+          <div class="resource-header">
+            <h3><i class="fas fa-file-pdf"></i> Helpful PDFs & Guides</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="resource-content">
+            <div class="resource-item">
+              <a href="https://web.stanford.edu/class/archive/cs/cs106a/cs106a.1124/handouts/200%20Java%20Programming%20Tips.pdf"
+                target="_blank">
+                <i class="fas fa-download"></i> Java Programming Tips
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="resource-item">
+              <a href="https://www.cs.princeton.edu/courses/archive/spr05/cos126/css/design-principles.pdf"
+                target="_blank">
+                <i class="fas fa-download"></i> UI Design Principles
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="resource-item">
+              <a href="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%20Lists/linked%20lists.pdf"
+                target="_blank">
+                <i class="fas fa-download"></i> Data Structures Guide
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="resource-item">
+              <a href="https://www.careercenter.uci.edu/_files/Handout-ResumeTemplate.pdf" target="_blank">
+                <i class="fas fa-download"></i> Resume Template Pack
+              </a>
+              <button class="save-resource" title="Save Resource">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="page-title" style="margin-top: 60px">Your Achievements</h2>
+      <div class="badges-container">
+        <div class="badge">
+          <i class="fas fa-medal"></i>
+          <h4>First Steps</h4>
+          <p>Complete your profile</p>
+          <div class="badge-progress">
+            <div class="badge-progress-fill" style="width: 100%"></div>
+          </div>
+        </div>
+        <div class="badge">
+          <i class="fas fa-book-reader"></i>
+          <h4>Scholar</h4>
+          <p>Read 5 resources</p>
+          <div class="badge-progress">
+            <div class="badge-progress-fill" style="width: 60%"></div>
+          </div>
+        </div>
+        <div class="badge">
+          <i class="fas fa-rocket"></i>
+          <h4>Explorer</h4>
+          <p>Explore 3 career paths</p>
+          <div class="badge-progress">
+            <div class="badge-progress-fill" style="width: 66%"></div>
+          </div>
+        </div>
+        <div class="badge locked">
+          <i class="fas fa-gem"></i>
+          <h4>Pathfinder</h4>
+          <p>Save your first path</p>
+          <div class="badge-progress">
+            <div class="badge-progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+        <div class="badge">
+          <i class="fas fa-search"></i>
+          <h4>Researcher</h4>
+          <p>Save 3 resources</p>
+          <div class="badge-progress">
+            <div class="badge-progress-fill" style="width: 33%"></div>
+          </div>
+        </div>
+        <div class="badge locked">
+          <i class="fas fa-star"></i>
+          <h4>Quiz Master</h4>
+          <p>Complete the career quiz</p>
+          <div class="badge-progress">
+            <div class="badge-progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Journey Page -->
+  <div id="my-journey" class="page">
+    <div class="container">
+      <h2 class="page-title">My Career Journey</h2>
+
+      <div id="saved-paths">
+        <!-- Content will be dynamically added from localStorage -->
+      </div>
+
+      <div class="no-journey" id="no-journey">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3>Your journey hasn't begun yet</h3>
+        <p>
+          Explore career options and save your favorite paths to view them
+          here.
+        </p>
+        <a href="#" class="cta-button explore-from-journey">Explore Careers</a>
+      </div>
+
+      <h2 class="page-title" style="margin-top: 60px">Your Progress</h2>
+      <div class="badges-container">
+        <div class="badge">
+          <i class="fas fa-medal"></i>
+          <h4>First Steps</h4>
+          <p>Completed</p>
+        </div>
+        <div class="badge">
+          <i class="fas fa-book-reader"></i>
+          <h4>Scholar</h4>
+          <p>3/5 resources</p>
+        </div>
+        <div class="badge">
+          <i class="fas fa-rocket"></i>
+          <h4>Explorer</h4>
+          <p>2/3 paths</p>
+        </div>
+        <div class="badge locked">
+          <i class="fas fa-gem"></i>
+          <h4>Pathfinder</h4>
+          <p>Locked</p>
+        </div>
+        <div class="badge">
+          <i class="fas fa-search"></i>
+          <h4>Researcher</h4>
+          <p>1/3 resources</p>
+        </div>
+        <div class="badge locked">
+          <i class="fas fa-star"></i>
+          <h4>Quiz Master</h4>
+          <p>Locked</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quiz Page -->
+  <div id="quiz" class="page">
+    <div class="container">
+      <h2 class="page-title">Career Path Quiz</h2>
+
+      <div class="quiz-container">
+        <div class="quiz-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <div class="progress-text">
+            <span>Question <span id="current-question">1</span> of
+              <span id="total-questions">5</span></span>
+            <span><span id="progress-percent">0</span>% Complete</span>
+          </div>
+        </div>
+
+        <div class="quiz-content">
+          <div class="quiz-question active" data-question="1">
+            <h3>What type of activities do you enjoy most?</h3>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="technology">
+                <div class="option-icon"><i class="fas fa-code"></i></div>
+                <div class="option-text">
+                  Solving complex problems and building things
+                </div>
+              </div>
+              <div class="quiz-option" data-value="creative">
+                <div class="option-icon">
+                  <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="option-text">
+                  Creating visual designs and artistic expressions
+                </div>
+              </div>
+              <div class="quiz-option" data-value="analytical">
+                <div class="option-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="option-text">
+                  Analyzing data and discovering patterns
+                </div>
+              </div>
+              <div class="quiz-option" data-value="social">
+                <div class="option-icon"><i class="fas fa-bullhorn"></i></div>
+                <div class="option-text">
+                  Communicating ideas and persuading people
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-question="2">
+            <h3>Which work environment do you prefer?</h3>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="technology">
+                <div class="option-icon"><i class="fas fa-laptop"></i></div>
+                <div class="option-text">Remote work with flexible hours</div>
+              </div>
+              <div class="quiz-option" data-value="creative">
+                <div class="option-icon"><i class="fas fa-palette"></i></div>
+                <div class="option-text">
+                  Creative studio with inspiring spaces
+                </div>
+              </div>
+              <div class="quiz-option" data-value="analytical">
+                <div class="option-icon"><i class="fas fa-flask"></i></div>
+                <div class="option-text">
+                  Research lab with cutting-edge technology
+                </div>
+              </div>
+              <div class="quiz-option" data-value="social">
+                <div class="option-icon"><i class="fas fa-users"></i></div>
+                <div class="option-text">
+                  Dynamic office with team collaboration
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-question="3">
+            <h3>What are your favorite subjects or topics to learn about?</h3>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="technology">
+                <div class="option-icon">
+                  <i class="fas fa-calculator"></i>
+                </div>
+                <div class="option-text">Math, logic, and technology</div>
+              </div>
+              <div class="quiz-option" data-value="creative">
+                <div class="option-icon">
+                  <i class="fas fa-drafting-compass"></i>
+                </div>
+                <div class="option-text">Art, design, and aesthetics</div>
+              </div>
+              <div class="quiz-option" data-value="analytical">
+                <div class="option-icon"><i class="fas fa-atom"></i></div>
+                <div class="option-text">
+                  Science, statistics, and research
+                </div>
+              </div>
+              <div class="quiz-option" data-value="social">
+                <div class="option-icon"><i class="fas fa-globe"></i></div>
+                <div class="option-text">
+                  Business, communication, and psychology
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-question="4">
+            <h3>How do you approach solving problems?</h3>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="technology">
+                <div class="option-icon">
+                  <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <div class="option-text">
+                  Break them down into logical steps
+                </div>
+              </div>
+              <div class="quiz-option" data-value="creative">
+                <div class="option-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="option-text">
+                  Think creatively and outside the box
+                </div>
+              </div>
+              <div class="quiz-option" data-value="analytical">
+                <div class="option-icon"><i class="fas fa-search"></i></div>
+                <div class="option-text">
+                  Research and analyze data for insights
+                </div>
+              </div>
+              <div class="quiz-option" data-value="social">
+                <div class="option-icon">
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <div class="option-text">
+                  Collaborate with others to find solutions
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-question="5">
+            <h3>
+              Which of these achievements would be most satisfying to you?
+            </h3>
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="technology">
+                <div class="option-icon"><i class="fas fa-cogs"></i></div>
+                <div class="option-text">
+                  Building a complex system that works perfectly
+                </div>
+              </div>
+              <div class="quiz-option" data-value="creative">
+                <div class="option-icon">
+                  <i class="fas fa-paint-roller"></i>
+                </div>
+                <div class="option-text">
+                  Creating a beautiful and functional design
+                </div>
+              </div>
+              <div class="quiz-option" data-value="analytical">
+                <div class="option-icon">
+                  <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="option-text">
+                  Discovering a new insight from data analysis
+                </div>
+              </div>
+              <div class="quiz-option" data-value="social">
+                <div class="option-icon"><i class="fas fa-trophy"></i></div>
+                <div class="option-text">
+                  Successfully launching a product that people love
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz-results" id="quiz-results">
+            <div class="result-header">
+              <div class="result-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <h2 class="result-title">Your Career Matches</h2>
+              <p class="result-description">
+                Based on your answers, we've identified these career paths
+                that align with your interests and strengths.
+              </p>
+            </div>
+
+            <div class="career-matches" id="career-matches">
+              <!-- Results will be populated here -->
+            </div>
+
+            <div class="result-actions">
+              <button class="quiz-btn" id="retake-quiz">
+                <i class="fas fa-redo"></i> Retake Quiz
+              </button>
+              <button class="quiz-btn" id="explore-careers">
+                Explore Careers <i class="fas fa-arrow-right"></i>
+              </button>
+              <button class="quiz-btn" id="save-results">
+                <i class="fas fa-bookmark"></i> Save Results
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-nav">
+          <button class="quiz-btn" id="prev-btn" disabled>
+            <i class="fas fa-arrow-left"></i> Previous
+          </button>
+          <button class="quiz-btn btn-next" id="next-btn">
+            Next <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inspiration Page -->
+  <div id="inspiration" class="page">
+    <div class="container">
+      <h2 class="page-title">Inspiration Wall</h2>
+
+      <div class="inspiration-grid">
+        <div class="inspiration-card">
+          <div class="inspiration-header">
+            <i class="fas fa-quote-left"></i>
+            <h3>Success Stories</h3>
+          </div>
+          <div class="inspiration-body">
+            <h3>From Retail to Software Engineer</h3>
+            <p>
+              Sarah worked in retail for 5 years before deciding to learn
+              coding through online resources. After 12 months of dedicated
+              study and building projects, she landed her first job as a
+              junior developer.
+            </p>
+            <div class="quote">
+              "It wasn't easy, but the consistent effort paid off. Now I'm
+              doing work I truly enjoy."
+            </div>
+            <p class="quote-author">- Sarah, Software Engineer</p>
+
+            <h3>Career Change at 40</h3>
+            <p>
+              Michael was an accountant for 15 years before transitioning to
+              UX design. He took online courses and built a portfolio that
+              eventually landed him a position at a tech startup.
+            </p>
+            <div class="quote">
+              "It's never too late to pursue work that you're passionate
+              about. The skills from my previous career were surprisingly
+              transferable."
+            </div>
+            <p class="quote-author">- Michael, UX Designer</p>
+          </div>
+        </div>
+
+        <div class="inspiration-card">
+          <div class="inspiration-header">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Motivational Quotes</h3>
+          </div>
+          <div class="inspiration-body">
+            <div class="quote">
+              "The future belongs to those who believe in the beauty of their
+              dreams."
+            </div>
+            <p class="quote-author">- Eleanor Roosevelt</p>
+
+            <div class="quote">
+              "Your work is going to fill a large part of your life, and the
+              only way to be truly satisfied is to do what you believe is
+              great work."
+            </div>
+            <p class="quote-author">- Steve Jobs</p>
+
+            <div class="quote">
+              "The only way to do great work is to love what you do."
+            </div>
+            <p class="quote-author">- Steve Jobs</p>
+
+            <div class="quote">
+              "Choose a job you love, and you will never have to work a day in
+              your life."
+            </div>
+            <p class="quote-author">- Confucius</p>
+
+            <div class="quote">
+              "Opportunities don't happen. You create them."
+            </div>
+            <p class="quote-author">- Chris Grosser</p>
+          </div>
+        </div>
+
+        <div class="inspiration-card">
+          <div class="inspiration-header">
+            <i class="fas fa-film"></i>
+            <h3>Inspirational Videos</h3>
+          </div>
+          <div class="inspiration-body">
+            <h3>Recommended Watchlist</h3>
+            <p>
+              These videos have inspired thousands to pursue their dream
+              careers:
+            </p>
+
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/bYQoUCaZE0w?si=-FagfNBn2JNk4PZd"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <ul>
+              <li>
+                <a href="https://www.ted.com/talks" target="_blank">TED Talks - Career Inspiration</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/c/GaryVaynerchuk" target="_blank">Gary Vaynerchuk -
+                  Entrepreneurship</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/c/ThomasFrank" target="_blank">Thomas Frank - Productivity & Career
+                  Development</a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/c/CharismaonCommand" target="_blank">Charisma on Command - Professional
+                  Skills</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="inspiration-card">
+          <div class="inspiration-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Learning Journeys</h3>
+          </div>
+          <div class="inspiration-body">
+            <h3>Self-Taught Success Stories</h3>
+            <p>
+              Many professionals have built successful careers through
+              self-directed learning:
+            </p>
+
+            <div class="quote">
+              "I spent 2 hours every morning before work learning to code.
+              Consistency was more important than the number of hours."
+            </div>
+            <p class="quote-author">- Jessica, Frontend Developer</p>
+
+            <div class="quote">
+              "YouTube tutorials, freeCodeCamp, and building real projects
+              were my university. I now lead a team of developers."
+            </div>
+            <p class="quote-author">- David, Engineering Manager</p>
+
+            <h3>Online Learning Platforms</h3>
+            <ul>
+              <li>
+                <a href="https://www.coursera.org/" target="_blank">Coursera - University courses</a>
+              </li>
+              <li>
+                <a href="https://www.udemy.com/" target="_blank">Udemy - Skill-based courses</a>
+              </li>
+              <li>
+                <a href="https://www.edx.org/" target="_blank">edX - University-level courses</a>
+              </li>
+              <li>
+                <a href="https://www.khanacademy.org/" target="_blank">Khan Academy - Free educational resources</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community Page -->
+  <div id="community" class="page">
+    <div class="container">
+      <h2 class="page-title">Community Hub</h2>
+
+      <div class="community-grid">
+        <div class="community-card">
+          <i class="fas fa-comments"></i>
+          <h3>Discussion Forums</h3>
+          <p>
+            Join conversations with other career explorers, ask questions, and
+            share experiences.
+          </p>
+          <a href="#" class="community-btn">Join Discussion</a>
+        </div>
+
+        <div class="community-card">
+          <i class="fas fa-user-friends"></i>
+          <h3>Mentorship Program</h3>
+          <p>
+            Connect with experienced professionals who can guide you on your
+            career journey.
+          </p>
+          <a href="#" class="community-btn">Find a Mentor</a>
+        </div>
+
+        <div class="community-card">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Events & Webinars</h3>
+          <p>
+            Participate in online events, workshops, and webinars to expand
+            your knowledge.
+          </p>
+          <a href="#" class="community-btn">View Events</a>
+        </div>
+
+        <div class="community-card">
+          <i class="fas fa-briefcase"></i>
+          <h3>Job Board</h3>
+          <p>
+            Explore career opportunities from companies looking for talent
+            like you.
+          </p>
+          <a href="#" class="community-btn">Browse Jobs</a>
+        </div>
+
+        <div class="community-card">
+          <i class="fas fa-project-diagram"></i>
+          <h3>Collaboration Space</h3>
+          <p>
+            Find partners for projects, startups, or collaborative learning
+            experiences.
+          </p>
+          <a href="#" class="community-btn">Start Collaborating</a>
+        </div>
+
+        <div class="community-card">
+          <i class="fas fa-hands-helping"></i>
+          <h3>Peer Support</h3>
+          <p>
+            Get feedback on your resume, portfolio, or interview skills from
+            the community.
+          </p>
+          <a href="#" class="community-btn">Get Support</a>
+        </div>
+      </div>
+
+      <div class="faq-container">
+        <h2 class="page-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How do I choose the right career path?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Choosing a career path involves self-reflection on your
+              interests, skills, values, and lifestyle preferences. Take our
+              career quiz, explore different options, and talk to
+              professionals in fields that interest you. Remember that many
+              people change careers multiple times throughout their lives.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What if I don't have experience in my desired field?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Everyone starts without experience! Look for entry-level
+              positions, internships, or apprenticeship programs. Build your
+              skills through online courses, personal projects, and
+              volunteering. Networking with professionals in your desired
+              field can also open doors to opportunities.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>
+              How long does it typically take to transition to a new career?
+            </h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              The timeline varies depending on the field, your existing
+              skills, and the time you can dedicate. Some transitions can
+              happen in 6-12 months with intensive learning, while others
+              might take 2-4 years if additional formal education is required.
+              The key is consistent progress toward your goal.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What are the most future-proof careers?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              While no career is completely future-proof, fields involving
+              technology, healthcare, renewable energy, and data analysis are
+              expected to grow. However, rather than chasing specific fields,
+              focus on developing adaptable skills like problem-solving,
+              creativity, and emotional intelligence that will be valuable
+              across many industries.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How can I network effectively in a new industry?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Start by attending industry events (virtual or in-person),
+              joining relevant online communities, and connecting with
+              professionals on LinkedIn. When reaching out, be specific about
+              what you admire in their work and ask thoughtful questions.
+              Offer value where you can, and remember that networking is about
+              building genuine relationships, not just asking for favors.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="page-title" style="margin-top: 60px">Community Tips</h2>
+      <div class="inspiration-grid">
+        <div class="inspiration-card">
+          <div class="inspiration-header">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="inspiration-body">
+            <p>
+              "Set aside dedicated time each day for learning, even if it's
+              just 30 minutes. Consistency is more important than marathon
+              sessions."
+            </p>
+            <p class="quote-author">- Michael, Career Changer</p>
+          </div>
+        </div>
+
+        <div class="inspiration-card">
+          <div class="inspiration-header">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <div class="inspiration-body">
+            <p>
+              "Don't be afraid to reach out to people whose careers you
+              admire. Most people are happy to share their experiences and
+              advice."
+            </p>
+            <p class="quote-author">- Jessica, Marketing Director</p>
+          </div>
+        </div>
+
+        <div class="inspiration-card">
+          <div class="inspiration-header">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="inspiration-body">
+            <p>
+              "Tailor your resume and cover letter for each application.
+              Highlight transferable skills that are relevant to the new
+              field."
+            </p>
+            <p class="quote-author">- David, Hiring Manager</p>
+          </div>
+        </div>
+
+        <div class="inspiration-card">
+          <div class="inspiration-header">
+            <i class="fas fa-interview"></i>
+          </div>
+          <div class="inspiration-body">
+            <p>
+              "Practice answering common interview questions, but also prepare
+              thoughtful questions to ask the interviewer. This shows your
+              genuine interest in the role."
+            </p>
+            <p class="quote-author">- Sarah, HR Specialist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
